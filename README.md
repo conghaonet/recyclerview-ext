@@ -33,7 +33,7 @@ java code:
 recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
     @Override
     public void onScrollUp() {
-        //Use RecyclerViewExtAdapter
+        //Use [https://github.com/conghaonet/RecyclerViewExt/blob/master/recycler_view_ext/src/main/java/com/app2m/widget/recyclerview/RecyclerViewExtAdapter.java](RecyclerViewExtAdapter)
         adapter.setDefaultFooterView();
     }
     @Override
