@@ -18,3 +18,24 @@ dependencies {
     compile 'com.github.conghaonet:RecyclerViewExt:0.1'
 }
 ```
+
+## Usage
+```xml
+<com.app2m.widget.recyclerview.RecyclerViewExt
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+```
+```java
+recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
+    @Override
+    public void onScrollUp() {
+        mAdapter.setDefaultFooterView();
+    }
+    @Override
+    public void onLastItemVisible(int lastPosition) {
+        loadData(mData.size());
+    }
+});
+```
+That's it!
