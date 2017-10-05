@@ -33,8 +33,11 @@ java code:
 recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
     @Override
     public void onScrollUp() {
-        //Use RecyclerViewExtAdapter, set default footer view.
+        //This adapter extends RecyclerViewExtAdapter
         adapter.setDefaultFooterView();
+	
+	//set your footer layout
+	//dapter.setCustomFooterView(YOUR_FOOTER_LAYOUT);
     }
     @Override
     public void onLastItemVisible(int lastPosition) {
