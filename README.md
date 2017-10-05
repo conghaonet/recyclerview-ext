@@ -38,7 +38,8 @@ recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
     }
     @Override
     public void onLastItemVisible(int lastPosition) {
-        loadData(mData.size());
+        //Execute pull up to refresh
+	... ...
     }
 });
 ```
