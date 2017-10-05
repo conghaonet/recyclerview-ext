@@ -1,4 +1,6 @@
 # RecyclerViewExt
+实现RecyclerView上拉刷新，添加footerView。RecyclerViewExt与其它上拉刷新控件比较，最大的不通是：当首次加载的数据不满一屏时，可以正常上拉刷新，并且配合SwipeRefreshLayout时无冲突。目前因为工作中不需要在列表中显示headerView，所以仅支持添加footerView。
+支持LinearLayoutManager、GridLayoutManager、StaggeredGridLayoutManager的垂直布局。
 [![](https://jitpack.io/v/conghaonet/RecyclerViewExt.svg)](https://jitpack.io/#conghaonet/RecyclerViewExt)
 
 ## Dependency
