@@ -61,6 +61,7 @@ License
 --------
 
     Copyright 2017 Cong Hao
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+    
+
+    Licensed under the [GNU GENERAL PUBLIC LICENSE V3] (http://www.gnu.org/licenses/gpl-3.0.html).
+    Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
