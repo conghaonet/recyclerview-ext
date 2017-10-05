@@ -15,6 +15,6 @@ allprojects {
 Then, add the library to your module `build.gradle`
 ```gradle
 dependencies {
-    compile 'com.github.conghaonet:RecyclerViewExt:latest.release.here'
+    compile 'com.github.conghaonet:RecyclerViewExt:0.1'
 }
 ```
