@@ -20,17 +20,21 @@ dependencies {
 ```
 
 ## Usage
+layout xml:
 ```xml
 <com.app2m.widget.recyclerview.RecyclerViewExt
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
 ```
+
+java code:
 ```java
 recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
     @Override
     public void onScrollUp() {
-        mAdapter.setDefaultFooterView();
+        //Use RecyclerViewExtAdapter
+        adapter.setDefaultFooterView();
     }
     @Override
     public void onLastItemVisible(int lastPosition) {
