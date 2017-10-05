@@ -14,12 +14,6 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="上拉加载更多"
-            android:onClick="@{(v) -> activity.onClickLoadMore(v)}"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="RecyclerViewExt"
             android:textAllCaps="false"
             android:onClick="@{(v) -> activity.onClickRecyclerViewExt(v)}"

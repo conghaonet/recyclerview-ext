@@ -14,8 +14,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".PullUpRefreshActivity">
-        </activity>
         <activity android:name=".RecyclerViewExtActivity">
         </activity>
     </application>

@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.app2m.samples.R;
 import com.app2m.samples.databinding.ActivityRecyclerViewExtBinding;
 import com.app2m.widget.recyclerview.RecyclerViewExt;
 
@@ -79,7 +78,6 @@ public class RecyclerViewExtActivity extends AppCompatActivity {
             @Override
             public void onScrollUp() {
                 mAdapter.setDefaultFooterView();
-                mAdapter.setCustomFooterView(R.layout.sample_footer_b);
             }
             @Override
             public void onLastItemVisible(int lastPosition) {
