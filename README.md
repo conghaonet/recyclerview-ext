@@ -28,13 +28,12 @@ layout xml:
     android:layout_height="match_parent"/>
 ```
 
-java code: [RecyclerViewExtAdapter](https://github.com/conghaonet/RecyclerViewExt/blob/master/recycler_view_ext/src/main/java/com/app2m/widget/recyclerview/RecyclerViewExtAdapter.java)
-
+java code: 
 ```java
 recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
     @Override
     public void onScrollUp() {
-        //Use RecyclerViewExtAdapter
+        //Use RecyclerViewExtAdapter, set default footer view.
         adapter.setDefaultFooterView();
     }
     @Override
@@ -43,5 +42,10 @@ recyclerView.setOnExtScrollListener(new RecyclerViewExt.OnExtScrollListener() {
 	... ...
     }
 });
+
+... ...
+
+//remove footer vieww;
+adapter.removeFooterView();
 ```
 That's it!
