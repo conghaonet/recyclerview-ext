@@ -60,8 +60,6 @@ That's it!
 License
 --------
 ```
-    Copyright 2017 Cong Hao
-    
     Licensed under the GNU GENERAL PUBLIC LICENSE Version 3.
     Everyone is permitted to copy and distribute verbatim copies 
     of this license document, but changing it is not allowed.
