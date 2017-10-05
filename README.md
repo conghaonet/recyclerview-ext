@@ -62,8 +62,9 @@ License
 ```
     Copyright 2017 Cong Hao
     
-    Licensed under the GNU GENERAL PUBLIC LICENSE V3.
-    Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+    Licensed under the GNU GENERAL PUBLIC LICENSE Version 3.
+    Everyone is permitted to copy and distribute verbatim copies 
+    of this license document, but changing it is not allowed.
     
     http://www.gnu.org/licenses/gpl-3.0.html
 ```
