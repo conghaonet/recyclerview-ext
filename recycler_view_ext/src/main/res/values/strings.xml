@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExtRecyclerView</string>
+    <string name="app2m_ext_recycler_view_default_footer_loading_text">加载中 &#8230;</string>
+</resources>
