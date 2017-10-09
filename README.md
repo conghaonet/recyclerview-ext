@@ -6,7 +6,7 @@
 [![](https://jitpack.io/v/conghaonet/RecyclerViewExt.svg)](https://jitpack.io/#conghaonet/RecyclerViewExt)
 
 ## Dependency
-Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
+Add this in your root `build.gradle` file (**not** your module `build.gradle` file)
 
 ```gradle
 allprojects {
