@@ -52,4 +52,4 @@ freeline.py
 freeline/
 freeline_project_description.json
 
-/config/gradle/upload.gradle
+config/gradle/upload.gradle
