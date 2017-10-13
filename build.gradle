@@ -15,6 +15,8 @@ allprojects {
         jcenter()
         maven { url "https://jitpack.io" }
     }
+    group = POM_GROUP
+    version = VERSION_NAME
 }
 
 task clean(type: Delete) {
