@@ -6,7 +6,7 @@
 [![](https://jitpack.io/v/conghaonet/RecyclerViewExt.svg)](https://jitpack.io/#conghaonet/RecyclerViewExt)
 
 ## Dependency
-Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
+Add this in your root `build.gradle` file (**not** your module `build.gradle` file)
 
 ```gradle
 allprojects {
@@ -60,8 +60,6 @@ That's it!
 License
 --------
 ```
-    Copyright 2017 Cong Hao
-    
     Licensed under the GNU GENERAL PUBLIC LICENSE Version 3.
     Everyone is permitted to copy and distribute verbatim copies 
     of this license document, but changing it is not allowed.
