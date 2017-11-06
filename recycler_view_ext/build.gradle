@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-//group = MAVEN_GROUP
+group = POM_GROUP
 
+/*
 ext.pomArtifactId = 'RecyclerViewExt'
 ext.pomPackaging = 'aar'
 ext.pomDescription = ''
-
 apply from: "../config/gradle/upload.gradle"
-
+*/
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as Integer
