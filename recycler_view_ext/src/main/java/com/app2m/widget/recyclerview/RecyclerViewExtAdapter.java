@@ -85,6 +85,10 @@ public abstract class RecyclerViewExtAdapter<VH extends RecyclerView.ViewHolder>
             notifyItemRemoved(getItemCount());
         }
     }
+    public boolean hasFooterView() {
+        return footerLayoutId > 0;
+    }
+
     @Override
     public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
         super.onViewAttachedToWindow(holder);
