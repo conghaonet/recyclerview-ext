@@ -3,13 +3,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = POM_GROUP
 
-/*
 //upload to native repositories
-ext.pomArtifactId = 'RecyclerViewExt'
+ext.pomArtifactId = 'recyclerview-ext'
 ext.pomPackaging = 'aar'
 ext.pomDescription = ''
 apply from: "../config/gradle/upload.gradle"
-*/
+
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as Integer
