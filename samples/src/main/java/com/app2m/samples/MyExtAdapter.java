@@ -18,7 +18,7 @@ import java.util.List;
  * E-mail: hao.cong@app2m.com
  */
 
-public class MyExtAdapter extends RecyclerViewExtAdapter<RecyclerView.ViewHolder> {
+public class MyExtAdapter extends RecyclerViewExtAdapter<MyExtAdapter.ItemViewHolder> {
     private final List<ItemVM> mData;
 
     public MyExtAdapter(List<ItemVM> data) {
@@ -36,8 +36,8 @@ public class MyExtAdapter extends RecyclerViewExtAdapter<RecyclerView.ViewHolder
     }
 
     @Override
-    public void onBindRealViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ((ItemViewHolder)holder).binding.setVariable(BR.item, mData.get(position));
+    public void onBindRealViewHolder(ItemViewHolder holder, int position) {
+        holder.binding.setVariable(BR.item, mData.get(position));
     }
 
     @Override

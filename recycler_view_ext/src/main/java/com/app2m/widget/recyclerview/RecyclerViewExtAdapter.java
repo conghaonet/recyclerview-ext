@@ -1,7 +1,8 @@
 package com.app2m.widget.recyclerview;
 
 import android.support.annotation.LayoutRes;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.ViewHolder;
+import android.support.v7.widget.RecyclerView.Adapter;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +13,12 @@ import android.view.ViewGroup;
  * E-mail: hao.cong@app2m.com
  */
 
-public abstract class RecyclerViewExtAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter {
+public abstract class RecyclerViewExtAdapter<VH extends ViewHolder> extends Adapter {
     public static final int TYPE_FOOTER = -2147483648;
     private int footerLayoutId;
 
     @Override
-    public final RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public final ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType == TYPE_FOOTER) {
             View view = LayoutInflater.from(parent.getContext()).inflate(footerLayoutId, parent, false);
             return new FooterViewHolder(view);
@@ -26,18 +27,19 @@ public abstract class RecyclerViewExtAdapter<VH extends RecyclerView.ViewHolder>
         }
     }
 
-    public abstract RecyclerView.ViewHolder onCreateRealViewHolder(ViewGroup parent, int viewType);
+    public abstract ViewHolder onCreateRealViewHolder(ViewGroup parent, int viewType);
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public final void onBindViewHolder(ViewHolder holder, int position) {
         if(position < getRealItemCount()) {
-            onBindRealViewHolder(holder, position);
+            onBindRealViewHolder((VH)holder, position);
         } else if(footerLayoutId > 0 && position + 1 == getItemCount()) {
             onBindFooterViewHolder(holder, position);
         }
     }
-    public abstract void onBindRealViewHolder(RecyclerView.ViewHolder holder, int position);
-    protected void onBindFooterViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public abstract void onBindRealViewHolder(VH holder, int position);
+
+    protected void onBindFooterViewHolder(ViewHolder holder, int position) {
 
     }
 
@@ -90,20 +92,20 @@ public abstract class RecyclerViewExtAdapter<VH extends RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
+    public void onViewAttachedToWindow(ViewHolder holder) {
         super.onViewAttachedToWindow(holder);
         if (isStaggeredGridLayout(holder)) {
             handleLayoutIfStaggeredGridLayout(holder, holder.getLayoutPosition());
         }
     }
-    private boolean isStaggeredGridLayout(RecyclerView.ViewHolder holder) {
+    private boolean isStaggeredGridLayout(ViewHolder holder) {
         ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
         if (layoutParams != null && layoutParams instanceof StaggeredGridLayoutManager.LayoutParams) {
             return true;
         }
         return false;
     }
-    protected void handleLayoutIfStaggeredGridLayout(RecyclerView.ViewHolder holder, int position) {
+    protected void handleLayoutIfStaggeredGridLayout(ViewHolder holder, int position) {
         if (getItemViewType(position) == TYPE_FOOTER) {
             StaggeredGridLayoutManager.LayoutParams p = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
             p.setFullSpan(true);
@@ -112,7 +114,7 @@ public abstract class RecyclerViewExtAdapter<VH extends RecyclerView.ViewHolder>
             p.setFullSpan(false);
         }
     }
-    static class FooterViewHolder extends RecyclerView.ViewHolder {
+    static class FooterViewHolder extends ViewHolder {
         public FooterViewHolder(View view) {
             super(view);
         }
