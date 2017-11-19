@@ -52,7 +52,7 @@ public abstract class RecyclerViewExtAdapter<VH extends ViewHolder> extends Adap
         }
     }
     @Override
-    public int getItemViewType(int position) {
+    public final int getItemViewType(int position) {
         if(footerLayoutId > 0) {
             if (position + 1 == getItemCount()) {
                 return TYPE_FOOTER;
