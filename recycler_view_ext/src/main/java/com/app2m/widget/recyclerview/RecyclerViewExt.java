@@ -15,7 +15,6 @@ import android.view.View;
 
 public class RecyclerViewExt extends RecyclerView {
     private OnScrollListener mOnScrollListener;
-    private boolean mIsScrollUp;
     private boolean mIsControlledOnScrollStateChanged;
     private float mActionDownY;
     private OnExtScrollListener mOnExtScrollListener;
